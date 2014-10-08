@@ -1,5 +1,5 @@
 /* 
-	Names:John Sayour
+    Names:John Sayour, Matt Pistacchio
     Section: 03
     Date: 2/25/2014
     File name: Lab2
@@ -254,7 +254,7 @@ void ADC_Init(void)
 unsigned char read_AD_input(unsigned char n) 
 { 
  	AMX1SL = n; // Set P1.n as the analog input for ADC1 
- 	ADC1CN = ADC1CN & ~0x20; // Clear the “Conversion Completed” flag 
+ 	ADC1CN = ADC1CN & ~0x20; // Clear the Â“Conversion CompletedÂ” flag 
  	ADC1CN = ADC1CN | 0x10; // Initiate A/D conversion 
  
  	while ((ADC1CN & 0x20) == 0x00);// Wait for conversion to complete 
